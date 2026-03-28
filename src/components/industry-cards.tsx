@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const industries = [
   {
     name: "Hospitality",
@@ -26,19 +28,27 @@ export function IndustryCards() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] md:grid-rows-2 gap-4">
           {/* Hero card */}
-          <div className="md:row-span-2 bg-indigo-400 text-white rounded-2xl p-8 flex flex-col justify-end">
-            <div className="flex-1 bg-indigo-300 rounded-xl mb-6 min-h-[200px] flex items-center justify-center text-sm text-indigo-5 font-medium">
-              [ Aviation customer photo ]
+          <div className="md:row-span-2 bg-indigo-400 text-white rounded-2xl overflow-hidden flex flex-col">
+            <div className="relative h-[280px] md:flex-1 min-h-[200px]">
+              <Image
+                src="/character-tech.png"
+                alt="AI technology character in neon-lit studio"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
-            <h3 className="font-[family-name:var(--font-display)] font-bold text-2xl md:text-[28px] leading-[1.1] mb-2">
-              Aviation
-            </h3>
-            <p className="text-indigo-5 text-[15px]">
-              Credential verification, seasonal staffing, compliance tracking for airlines and airports.
-            </p>
-            <p className="text-indigo-5/70 text-sm italic mt-4 pt-4 border-t border-white/15">
-              &quot;50skills transformed how we onboard 400 seasonal workers every summer.&quot; — Isavia
-            </p>
+            <div className="p-8">
+              <h3 className="font-[family-name:var(--font-display)] font-bold text-2xl md:text-[28px] leading-[1.1] mb-2">
+                Aviation
+              </h3>
+              <p className="text-indigo-5 text-[15px]">
+                Credential verification, seasonal staffing, compliance tracking for airlines and airports.
+              </p>
+              <p className="text-indigo-5/70 text-sm italic mt-4 pt-4 border-t border-white/15">
+                &quot;50skills transformed how we onboard 400 seasonal workers every summer.&quot; — Isavia
+              </p>
+            </div>
           </div>
 
           {/* Secondary cards */}

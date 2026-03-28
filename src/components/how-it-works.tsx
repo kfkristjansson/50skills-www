@@ -1,18 +1,23 @@
+import Image from "next/image";
+
 const steps = [
   {
-    photo: "\"Too busy\" character at desk",
+    photo: "/character-overwhelmed.png",
+    photoAlt: "Overwhelmed HR manager at cluttered desk — before 50skills",
     number: "01",
     title: "Describe",
     desc: "Tell Navigator what you need in plain language. No templates, no configuration.",
   },
   {
-    photo: "Navigator prompt box, typing",
+    photo: "/character-busy.png",
+    photoAlt: "HR professional navigating complex workflows with AI cards overlaid",
     number: "02",
     title: "Build",
     desc: "AI creates the workflow structure in seconds. Review, adjust, and approve.",
   },
   {
-    photo: "\"Stress free\" character, dashboard",
+    photo: "/character-stressfree.png",
+    photoAlt: "Relaxed HR professional at organized desk — after 50skills automation",
     number: "03",
     title: "Run",
     desc: "Employees interact through portals, email, Slack, or AI. You stay in control.",
@@ -29,8 +34,14 @@ export function HowItWorks() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-8">
           {steps.map((step) => (
             <div key={step.number} className="text-center">
-              <div className="w-full aspect-[4/3] bg-indigo-50 rounded-xl mb-6 flex items-center justify-center text-sm text-indigo-300 font-medium px-4">
-                [ {step.photo} ]
+              <div className="w-full aspect-[4/3] rounded-xl mb-6 overflow-hidden relative bg-indigo-50">
+                <Image
+                  src={step.photo}
+                  alt={step.photoAlt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
               </div>
               <div className="text-blue-hl font-[family-name:var(--font-display)] font-bold text-sm mb-2">
                 {step.number}

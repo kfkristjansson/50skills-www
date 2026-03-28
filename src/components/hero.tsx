@@ -36,18 +36,18 @@ export function Hero() {
           50skills turns natural language into automated employee processes.
         </p>
 
-        {/* Prompt box */}
-        <div className="max-w-[680px] mx-auto bg-indigo-400 rounded-2xl p-5 md:p-6 md:pl-8 flex flex-col md:flex-row items-stretch md:items-center gap-3">
+        {/* Prompt box — light, like ChatGPT/Claude/Lovable */}
+        <div className="max-w-[680px] mx-auto bg-white border border-gray-100 rounded-2xl p-3 md:p-4 shadow-[0_2px_12px_rgba(35,0,78,0.06)] flex flex-col md:flex-row items-stretch md:items-center gap-3">
           <input
             ref={inputRef}
             type="text"
-            className={`flex-1 bg-transparent border-none outline-none font-[family-name:var(--font-mono)] text-base text-white placeholder:text-indigo-5/50 transition-opacity duration-300 ${
+            className={`flex-1 bg-transparent border-none outline-none text-base text-indigo-400 placeholder:text-gray-200 px-3 py-2 transition-opacity duration-300 ${
               fade ? "opacity-100" : "opacity-0"
             }`}
             placeholder={placeholders[placeholderIdx]}
           />
-          <button className="bg-blue-hl hover:bg-blue-hl-hover text-white rounded-xl px-6 py-3 text-[15px] font-medium whitespace-nowrap transition-colors">
-            Try Navigator free
+          <button className="bg-blue-hl hover:bg-blue-hl-hover text-white rounded-xl px-6 py-3 text-[15px] font-medium whitespace-nowrap transition-colors shrink-0">
+            Try Navigator free →
           </button>
         </div>
       </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -21,19 +22,13 @@ export function Nav() {
     >
       <div className="max-w-[1200px] mx-auto w-full px-6 md:px-10 lg:px-20 flex items-center justify-between">
         {/* Logo */}
-        <a href="/" className="font-[family-name:var(--font-display)] font-bold text-xl text-indigo-400 flex items-center gap-2">
-          <svg width="24" height="24" viewBox="0 0 28 28" fill="none">
-            <rect width="14" height="14" fill="#23004E" />
-            <rect x="14" y="14" width="14" height="14" fill="#23004E" />
-            <rect y="14" width="14" height="14" fill="#6E5DC6" />
-            <rect x="14" width="14" height="14" fill="#6E5DC6" />
-          </svg>
-          50skills
+        <a href="/" className="flex items-center">
+          <Image src="/logo.svg" alt="50skills" width={140} height={29} priority />
         </a>
 
         {/* Links */}
         <ul className="hidden md:flex gap-8">
-          {["Products", "Customers", "Pricing", "Blog"].map((item) => (
+          {["Product", "Customers", "Pricing", "Blog"].map((item) => (
             <li key={item}>
               <a
                 href="#"

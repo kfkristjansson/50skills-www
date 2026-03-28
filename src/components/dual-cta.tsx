@@ -11,14 +11,14 @@ export function DualCta() {
             <p className="text-gray-500 mb-8">
               Describe what you need and see it built in seconds.
             </p>
-            <div className="bg-indigo-400 rounded-xl p-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+            <div className="bg-gray-50 border border-gray-100 rounded-xl p-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
               <input
                 type="text"
                 placeholder="Describe your workflow..."
-                className="flex-1 bg-transparent border-none outline-none font-[family-name:var(--font-mono)] text-sm text-white placeholder:text-indigo-5/50"
+                className="flex-1 bg-transparent border-none outline-none text-sm text-indigo-400 placeholder:text-gray-200 px-2 py-2"
               />
-              <button className="bg-blue-hl hover:bg-blue-hl-hover text-white rounded-lg px-4 py-2 text-sm font-medium whitespace-nowrap transition-colors">
-                Try free
+              <button className="bg-blue-hl hover:bg-blue-hl-hover text-white rounded-lg px-4 py-2.5 text-sm font-medium whitespace-nowrap transition-colors shrink-0">
+                Try free →
               </button>
             </div>
           </div>

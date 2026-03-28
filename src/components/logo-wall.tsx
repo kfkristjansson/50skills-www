@@ -1,9 +1,10 @@
 const logos = [
-  "Isavia", "Marel", "Tern", "Sena", "ORF Genetics",
-  "Advania", "Nova", "Nox Medical", "Kerecis",
+  "Icelandair", "Securitas", "Isavia", "Vodafone", "Hilton",
+  "Islandshotel", "Festi", "Domino's", "Samskip", "Samkaup",
+  "ELKO", "Wortell", "GRID",
 ];
 
-const badges = ["Cyber Essentials Plus", "GDPR Compliant", "SOC 2"];
+const badges = ["Cyber Essentials Plus", "GDPR Compliant"];
 
 export function LogoWall() {
   return (
@@ -16,7 +17,7 @@ export function LogoWall() {
           {logos.map((name) => (
             <div
               key={name}
-              className="h-8 px-5 bg-gray-100 rounded-md flex items-center justify-center text-[11px] text-gray-500 font-medium"
+              className="h-8 px-5 bg-gray-50 rounded-md flex items-center justify-center text-[11px] text-gray-500 font-medium"
             >
               {name}
             </div>

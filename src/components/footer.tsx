@@ -1,15 +1,17 @@
+import Image from "next/image";
+
 const columns = [
   {
-    title: "Products",
-    links: ["Journeys", "50hire", "Integrations", "Pricing"],
+    title: "Platform",
+    links: ["Workflow Automation", "AI Navigator", "AI Agents", "Integrations", "Templates", "Pricing"],
   },
   {
     title: "Company",
-    links: ["About", "Customers", "Blog", "Careers"],
+    links: ["About", "Customers", "Blog", "Careers", "Contact"],
   },
   {
     title: "Resources",
-    links: ["Help Center", "Security", "API Docs", "Status"],
+    links: ["Help Center", "Security", "API Docs", "FAQ"],
   },
 ];
 
@@ -20,17 +22,14 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-[2fr_1fr_1fr_1fr] gap-8 md:gap-12 mb-12">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <div className="font-[family-name:var(--font-display)] font-bold text-xl flex items-center gap-2 mb-4">
-              <svg width="20" height="20" viewBox="0 0 28 28" fill="none">
-                <rect width="14" height="14" fill="white" />
-                <rect x="14" y="14" width="14" height="14" fill="white" />
-                <rect y="14" width="14" height="14" fill="rgba(255,255,255,0.5)" />
-                <rect x="14" width="14" height="14" fill="rgba(255,255,255,0.5)" />
-              </svg>
-              50skills
+            <div className="mb-4">
+              <Image src="/logo-white.svg" alt="50skills" width={120} height={25} />
             </div>
-            <p className="text-sm text-white/60 max-w-[280px] leading-relaxed">
+            <p className="text-sm text-white/60 max-w-[280px] leading-relaxed mb-4">
               AI-powered HR workflow automation. Built in Reykjavik.
+            </p>
+            <p className="text-xs text-white/40">
+              Also by 50skills: <a href="https://50hire.com" className="text-white/50 hover:text-white/70 underline transition-colors">50hire.com</a>
             </p>
           </div>
 

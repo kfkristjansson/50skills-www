@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors — Indigo range (primary) */
+  --color-indigo-5: #EFECFE;
+  --color-indigo-50: #D8D0FD;
+  --color-indigo-100: #B8ABFA;
+  --color-indigo-200: #8B7BF0;
+  --color-indigo-300: #6E5DC6;
+  --color-indigo-400: #23004E;
+
+  /* Colors — Blue range (secondary) */
+  --color-blue-5: #F2F6FE;
+  --color-blue-400: #152663;
+
+  /* Colors — Highlights */
+  --color-green: #2BF8B3;
+  --color-orange: #E97C1D;
+  --color-blue-hl: #337FFF;
+  --color-blue-hl-hover: #2563EB;
+  --color-purple-hl: #6E5DC6;
+
+  /* Colors — Neutrals */
+  --color-gray-50: #F8F8FA;
+  --color-gray-100: #E8E8EC;
+  --color-gray-200: #C8C8D0;
+  --color-gray-500: #6B6B78;
+  --color-gray-900: #1A1A24;
+
+  /* Fonts */
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: "Geist Mono", monospace;
+}
+
+/* Base styles */
+::selection {
+  background: var(--color-indigo-5);
+  color: var(--color-indigo-400);
+}
+
+body {
+  font-family: var(--font-body), system-ui, sans-serif;
+  color: var(--color-indigo-400);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scroll animation */
+@media (prefers-reduced-motion: no-preference) {
+  .fade-in {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 400ms ease-out, transform 400ms ease-out;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -28,13 +28,18 @@ export function Nav() {
 
         {/* Links */}
         <ul className="hidden md:flex gap-8">
-          {["Product", "Customers", "Pricing", "Blog"].map((item) => (
-            <li key={item}>
+          {[
+            { label: "Product", href: "#" },
+            { label: "Customers", href: "#" },
+            { label: "Pricing", href: "/pricing" },
+            { label: "Blog", href: "#" },
+          ].map((item) => (
+            <li key={item.label}>
               <a
-                href="#"
+                href={item.href}
                 className="text-[15px] font-medium text-indigo-400 hover:text-blue-hl transition-colors"
               >
-                {item}
+                {item.label}
               </a>
             </li>
           ))}

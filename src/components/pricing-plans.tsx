@@ -516,19 +516,35 @@ export function PricingPlans() {
       ═══════════════════════════════════════════════════ */}
       <section className="pb-20">
         <div className="max-w-[1200px] mx-auto px-6 md:px-10 lg:px-20">
-          <div className="bg-indigo-5 rounded-2xl p-6 md:p-8 text-center max-w-[800px] mx-auto">
-            <h3 className="font-[family-name:var(--font-display)] font-bold text-[22px] md:text-[24px] tracking-[-0.02em] text-indigo-400 mb-2">
-              Not sure which credit tier you need?
-            </h3>
-            <p className="text-[15px] text-gray-500 mb-4">
-              Estimate your usage based on company size and see your business case.
-            </p>
-            <a
-              href={`/pricing/calculator?plan=${selectedPlan}&annual=${annual}`}
-              className="inline-flex items-center text-blue-hl hover:text-blue-hl-hover text-[15px] font-medium transition-colors"
-            >
-              Build your business case &rarr;
-            </a>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[800px] mx-auto">
+            <div className="bg-indigo-5 rounded-2xl p-6 md:p-8 text-center">
+              <h3 className="font-[family-name:var(--font-display)] font-bold text-[20px] md:text-[22px] tracking-[-0.02em] text-indigo-400 mb-2">
+                See all credit tiers
+              </h3>
+              <p className="text-[14px] text-gray-500 mb-4">
+                Full tier-by-tier pricing across all plans and currencies.
+              </p>
+              <a
+                href="/pricing/overview"
+                className="inline-flex items-center text-blue-hl hover:text-blue-hl-hover text-[15px] font-medium transition-colors"
+              >
+                View credit overview &rarr;
+              </a>
+            </div>
+            <div className="bg-indigo-5 rounded-2xl p-6 md:p-8 text-center">
+              <h3 className="font-[family-name:var(--font-display)] font-bold text-[20px] md:text-[22px] tracking-[-0.02em] text-indigo-400 mb-2">
+                Estimate your usage
+              </h3>
+              <p className="text-[14px] text-gray-500 mb-4">
+                Build a business case based on your company size and workflows.
+              </p>
+              <a
+                href={`/pricing/calculator?plan=${selectedPlan}&annual=${annual}`}
+                className="inline-flex items-center text-blue-hl hover:text-blue-hl-hover text-[15px] font-medium transition-colors"
+              >
+                Build your business case &rarr;
+              </a>
+            </div>
           </div>
         </div>
       </section>

@@ -1,7 +1,6 @@
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { PricingPlans } from "@/components/pricing-plans";
-import { CreditTiers } from "@/components/credit-tiers";
 
 export const metadata = {
   title: "Pricing — 50skills Journeys",
@@ -15,7 +14,6 @@ export default function PricingPage() {
       <Nav />
       <main>
         <PricingPlans />
-        <CreditTiers />
       </main>
       <Footer />
     </>
